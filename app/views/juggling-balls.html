@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Juggling</h1>
+
+      <form class="form" action="/juggling-trick" method="post">
+
+        <p>How many balls can you juggle?</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Select
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+      <input id="radio-1" type="radio" name="juggling-balls" value="3 or more” {{ checked("juggling-balls", "3 or more") }} >
+                <label class="govuk-label govuk-radios__label" for="how-many-balls">
+                 3 or more
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+    <input id="radio-1" type="radio" name="juggling-balls" value="3 or more” {{ checked("juggling-balls", "1 or 2") }} >
+                <label class="govuk-label govuk-radios__label" for="how-many-balls-2">
+                  1 or 2
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+    <input id="radio-1" type="radio" name="juggling-balls" value="3 or more” {{ checked("juggling-balls", "None") }} >
+                <label class="govuk-label govuk-radios__label" for="how-many-balls-3">
+                      None - I'can't juggle
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+
+        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
